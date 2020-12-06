@@ -1,12 +1,22 @@
 package com.example.cocktailmaker;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.cardview.widget.CardView;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    CardView Whiskey_Card;
+    CardView Gin_Card;
+    CardView Tequila_Card;
+    CardView White_Rum_Card;
+    CardView Dark_Rum_Card;
+    CardView Vodka_Card;
+
     public static void main(String[] args) {
         //Vodka
         ArrayList<String> ScrewDriver = new ArrayList<String>();
@@ -84,5 +94,67 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Vodka_Card = (CardView)findViewById(R.id.Card1);
+        Whiskey_Card = (CardView)findViewById(R.id.Card2);
+        Tequila_Card = (CardView)findViewById(R.id.Card3);
+        White_Rum_Card = (CardView)findViewById(R.id.Card4);
+        Dark_Rum_Card = (CardView)findViewById(R.id.Card5);
+        Gin_Card = (CardView)findViewById(R.id.Card6);
+        Vodka_Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Activity_2.class);
+
+                // start the activity connect to the specified class
+                startActivity(intent);
+            }
+        });
+        Whiskey_Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Activity_2.class);
+
+                // start the activity connect to the specified class
+                startActivity(intent);
+            }
+        });
+        Tequila_Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Activity_2.class);
+
+                // start the activity connect to the specified class
+                startActivity(intent);
+            }
+        });
+        White_Rum_Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Activity_2.class);
+
+                // start the activity connect to the specified class
+                startActivity(intent);
+            }
+        });
+        Dark_Rum_Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Activity_2.class);
+
+                // start the activity connect to the specified class
+                startActivity(intent);
+            }
+        });
+        Gin_Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Activity_2.class);
+
+                // start the activity connect to the specified class
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
