@@ -2,10 +2,16 @@ package com.example.cocktailmaker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Activity_2 extends AppCompatActivity {
@@ -13,6 +19,8 @@ public class Activity_2 extends AppCompatActivity {
     CheckBox Orange_Juice, Lemon, Ginger_Beer, Honey, Sugar, Grenadine, Club_Soda, Lime, Simple_Syrup, Mint, Pineapple_Juice, Cream_of_Coconut, Apple_Juice, Cucumber, Creme, Blueberries;
 
     ArrayList<String> User_Input = new ArrayList<String>();
+    TextView final_text;
+    private Button button;
 
     public void onCheckboxClicked(View view) {
 
@@ -21,71 +29,132 @@ public class Activity_2 extends AppCompatActivity {
             case R.id.checkbox_OJ:
                 if (checked)
                     User_Input.add("Orange_Juice");
+                else
+                    User_Input.remove("Orange_Juice");
                 break;
             case R.id.checkbox_lemons:
                 if (checked)
                     User_Input.add("Lemon");
+                else
+                    User_Input.remove("Lemon");
             case R.id.checkbox_GingerBeer:
                 if (checked)
                     User_Input.add("Ginger_Beer");
+                else
+                    User_Input.remove("Ginger_Beer");
                 break;
             case R.id.checkbox_honey:
                 if (checked)
                     User_Input.add("Honey");
+                else
+                    User_Input.remove("Honey");
                 break;
             case R.id.checkbox_sugar:
                 if (checked)
                     User_Input.add("Sugar");
+                else
+                    User_Input.remove("Sugar");
                 break;
             case R.id.checkbox_Grenadine:
                 if (checked)
                     User_Input.add("Grenadine");
+                else
+                    User_Input.remove("Grenadine");
                 break;
             case R.id.checkbox_soda:
                 if (checked)
                     User_Input.add("Club_Soda");
+                else
+                    User_Input.remove("Club_Soda");
                 break;
             case R.id.checkbox_lime:
                 if (checked)
                     User_Input.add("Lime");
+                else
+                    User_Input.remove("Lime");
                 break;
             case R.id.checkbox_Syrup:
                 if (checked)
                     User_Input.add("Simple_Syrup");
+                else
+                    User_Input.remove("Simple_Syrup");
                 break;
             case R.id.checkbox_Pineapple:
                 if (checked)
                     User_Input.add("Pineapple");
+                else
+                    User_Input.remove("Pineapple");
                 break;
             case R.id.checkbox_Coconut:
                 if (checked)
                     User_Input.add("Cream_of_Coconut");
+                else
+                    User_Input.remove("Cream_of_Coconut");
                 break;
             case R.id.checkbox_Apple:
                 if (checked)
                     User_Input.add("Apple_Juice");
+                else
+                    User_Input.remove("Apple_Juice");
                 break;
             case R.id.checkbox_Mint:
                 if (checked)
                     User_Input.add("Mint");
+                else
+                    User_Input.remove("Mint");
                 break;
             case R.id.checkbox_Creme:
                 if (checked)
                     User_Input.add("Creme");
+                else
+                    User_Input.remove("Creme");
                 break;
             case R.id.checkbox_Blackberries:
                 if (checked)
                     User_Input.add("Blackberries");
+                else
+                    User_Input.remove("Blackberries");
                 break;
             case R.id.checkbox_Cucumber:
                 if (checked)
                     User_Input.add("Cucumber");
+                else
+                    User_Input.remove("Cucumber");
                 break;
         }
     }
+    public void finalSelection(View view){
+        //add the ingredients into preview before searching
+        String final_cocktail_selection = "";
+        for (String Selections : User_Input){
+            final_cocktail_selection = final_cocktail_selection + Selections + "\n";
+        }
+        final_text.setText(final_cocktail_selection);
+            final_text.setEnabled(true);
+            //Store values to Logcat and preview
+        TextView t = findViewById(R.id.final_result);
+        String input = t.getText().toString();
+        Log.d("info", input);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
+        final_text = (TextView) findViewById(R.id.final_result);
+        final_text.setEnabled(false);
+
+        button = findViewById(R.id.SearchButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSearchLayout();
+            }
+        });
+        }
+    public void openSearchLayout(){
+        Intent intent = new Intent (this, search_activity_layout.class);
+        startActivity(intent);
     }
+
 }

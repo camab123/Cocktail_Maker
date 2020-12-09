@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     CardView Dark_Rum_Card;
     CardView Vodka_Card;
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         //Vodka
         ArrayList<String> ScrewDriver = new ArrayList<String>();
         ScrewDriver.add("Vodka");
@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         BrambleGinCocktail.add("Simple_Syrup");
         BrambleGinCocktail.add("Creme");
         BrambleGinCocktail.add("Blackberries");
+
     }
 
     @Override
