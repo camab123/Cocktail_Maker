@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BB3962"
-    tools:context=".MainActivity">
+    tools:context=".Brample_Gin">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

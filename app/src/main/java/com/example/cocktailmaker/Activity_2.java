@@ -19,7 +19,37 @@ public class Activity_2 extends AppCompatActivity {
     CheckBox Orange_Juice, Lemon, Ginger_Beer, Honey, Sugar, Grenadine, Club_Soda, Lime, Simple_Syrup, Mint, Pineapple_Juice, Cream_of_Coconut, Apple_Juice, Cucumber, Creme, Blueberries;
     TextView final_text;
     Button submit_button;
+    static Intent intent;
 
+    static ArrayList<String> ScrewDriver = new ArrayList<String>();
+
+    static ArrayList<String> MoscowMule = new ArrayList<String>();
+
+    static ArrayList<String> HotToddy = new ArrayList<String>();
+
+    static ArrayList<String> WhiskeySour = new ArrayList<String>();
+
+    static ArrayList<String> TequilaSunrise = new ArrayList<String>();
+
+    static ArrayList<String> TequilaHighball = new ArrayList<String>();
+
+    static ArrayList<String> ClassicMojito = new ArrayList<String>();
+
+    static ArrayList<String> PinaColada = new ArrayList<String>();
+
+    static ArrayList<String> DarkStormy = new ArrayList<String>();
+
+    static ArrayList<String> PainKiller = new ArrayList<String>();
+
+    static ArrayList<String> EnglishGardenCocktail = new ArrayList<String>();
+
+    static ArrayList<String> BrambleGinCocktail = new ArrayList<String>();
+
+    public static void main(String[] args){
+
+
+
+    }
 
     public void onCheckboxClicked(View view) {
 
@@ -135,7 +165,80 @@ public class Activity_2 extends AppCompatActivity {
         TextView t = findViewById(R.id.final_result);
         String input = t.getText().toString();
         Log.d("info", input);
+        //Vodka
 
+        ScrewDriver.add("Vodka");
+        ScrewDriver.add("Orange_Juice");
+
+
+        MoscowMule.add("Vodka");
+        MoscowMule.add("Lemon");
+        MoscowMule.add("Ginger_Beer");
+
+        //Whiskey
+
+        HotToddy.add("Whiskey");
+        HotToddy.add("Lemon");
+        HotToddy.add("Honey");
+
+
+        WhiskeySour.add("Whiskey");
+        WhiskeySour.add("Lemon");
+        WhiskeySour.add("Orange_Juice");
+        WhiskeySour.add("Sugar");
+
+        //Tequila
+
+        TequilaSunrise.add("Tequila");
+        TequilaSunrise.add("Orange_Juice");
+        TequilaSunrise.add("Grenadine");
+
+
+        TequilaHighball.add("Tequila");
+        TequilaHighball.add("Club_Soda");
+        TequilaHighball.add("Lime");
+
+        //White Rum
+
+        ClassicMojito.add("White_Rum");
+        ClassicMojito.add("Simple_Syrup");
+        ClassicMojito.add("Lime");
+        ClassicMojito.add("Mint");
+        ClassicMojito.add("Club_Soda");
+
+
+        PinaColada.add("White_Rum");
+        PinaColada.add("Pineapple_Juice");
+        PinaColada.add("Lime_Juice");
+        PinaColada.add("Cream_of_Coconut");
+
+        //Dark Rum
+
+        DarkStormy.add("Dark_Rum");
+        DarkStormy.add("Lime");
+        DarkStormy.add("Ginger_Beer");
+
+
+        PainKiller.add("Dark_Rum");
+        PainKiller.add("Cream_of_Coconut");
+        PainKiller.add("Orange_Juice");
+        PainKiller.add("Pineapple_Juice");
+
+        //Gin
+
+        EnglishGardenCocktail.add("Gin");
+        EnglishGardenCocktail.add("Apple_Juice");
+        EnglishGardenCocktail.add("Lime");
+        EnglishGardenCocktail.add("Cucumber");
+
+        BrambleGinCocktail.add("Gin");
+        BrambleGinCocktail.add("Lemon");
+        BrambleGinCocktail.add("Simple_Syrup");
+        BrambleGinCocktail.add("Creme");
+        BrambleGinCocktail.add("Blackberries");
+
+        System.out.println(MainActivity.User_Input);
+        System.out.println(WhiskeySour);
     }
 
     @Override
@@ -144,19 +247,20 @@ public class Activity_2 extends AppCompatActivity {
         setContentView(R.layout.activity_2);
         final_text = (TextView) findViewById(R.id.final_result);
         final_text.setEnabled(false);
-
         submit_button = findViewById(R.id.SearchButton);
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (MainActivity.User_Input.containsAll(MainActivity.WhiskeySour)) {
-                    Intent intent = new Intent(Activity_2.this, Whiskey_Sour_Activity.class);
-                    startActivity(intent);
+
+                if (MainActivity.User_Input.containsAll(WhiskeySour)) {
+                    intent = new Intent(Activity_2.this, Whiskey_Sour_Activity.class);
                 }
-                if (MainActivity.User_Input.containsAll(MainActivity.BrambleGinCocktail)) {
-                    Intent intent = new Intent(Activity_2.this, Brample_Gin.class);
-                    startActivity(intent);
+                if (MainActivity.User_Input.containsAll(BrambleGinCocktail)) {
+                    intent = new Intent(Activity_2.this, Brample_Gin.class);
                 }
+
+                startActivity(intent);
+
             }
         });
 
