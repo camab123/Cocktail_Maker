@@ -157,9 +157,6 @@ public class Activity_2 extends AppCompatActivity {
                     Intent intent = new Intent(Activity_2.this, Brample_Gin.class);
                     startActivity(intent);
                 }
-
-                // start the activity connect to the specified class
-
             }
         });
 
