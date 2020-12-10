@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Brample_Gin"></activity>
+        <activity android:name=".Dark_Stormy_Activity"></activity>
+        <activity android:name=".Mojito_Activity" />
+        <activity android:name=".Brample_Gin" />
         <activity
             android:name=".Whiskey_Sour_Activity"
             android:label="@string/title_activity_whiskey__sour_"

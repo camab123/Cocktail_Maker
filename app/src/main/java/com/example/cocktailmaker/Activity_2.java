@@ -258,6 +258,12 @@ public class Activity_2 extends AppCompatActivity {
                 if (MainActivity.User_Input.containsAll(BrambleGinCocktail)) {
                     intent = new Intent(Activity_2.this, Brample_Gin.class);
                 }
+                if (MainActivity.User_Input.containsAll(ClassicMojito)) {
+                    intent = new Intent(Activity_2.this, Mojito_Activity.class);
+                }
+                if (MainActivity.User_Input.containsAll(DarkStormy)) {
+                    intent = new Intent(Activity_2.this, Dark_Stormy_Activity.class);
+                }
 
                 startActivity(intent);
 
