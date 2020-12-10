@@ -16,73 +16,101 @@ public class MainActivity extends AppCompatActivity {
     CardView White_Rum_Card;
     CardView Dark_Rum_Card;
     CardView Vodka_Card;
+    //User Input
+    static ArrayList<String> User_Input = new ArrayList<String>();
+
+    static ArrayList<String> ScrewDriver = new ArrayList<String>();
+
+    static ArrayList<String> MoscowMule = new ArrayList<String>();
+
+    static ArrayList<String> HotToddy = new ArrayList<String>();
+
+    static ArrayList<String> WhiskeySour = new ArrayList<String>();
+
+    static ArrayList<String> TequilaSunrise = new ArrayList<String>();
+
+    static ArrayList<String> TequilaHighball = new ArrayList<String>();
+
+    static ArrayList<String> ClassicMojito = new ArrayList<String>();
+
+    static ArrayList<String> PinaColada = new ArrayList<String>();
+
+    static ArrayList<String> DarkStormy = new ArrayList<String>();
+
+    static ArrayList<String> PainKiller = new ArrayList<String>();
+
+    static ArrayList<String> EnglishGardenCocktail = new ArrayList<String>();
+
+    static ArrayList<String> BrambleGinCocktail = new ArrayList<String>();
 
     public static void main(String[] args){
+
         //Vodka
-        ArrayList<String> ScrewDriver = new ArrayList<String>();
+
         ScrewDriver.add("Vodka");
         ScrewDriver.add("Orange_Juice");
 
-        ArrayList<String> MoscowMule = new ArrayList<String>();
+
         MoscowMule.add("Vodka");
         MoscowMule.add("Lemon");
         MoscowMule.add("Ginger_Beer");
 
         //Whiskey
-        ArrayList<String> HotToddy = new ArrayList<String>();
+
         HotToddy.add("Whiskey");
         HotToddy.add("Lemon");
         HotToddy.add("Honey");
 
-        ArrayList<String> WhiskeySour = new ArrayList<String>();
+
         WhiskeySour.add("Whiskey");
         WhiskeySour.add("Lemon");
         WhiskeySour.add("Orange_Juice");
         WhiskeySour.add("Sugar");
 
         //Tequila
-        ArrayList<String> TequilaSunrise = new ArrayList<String>();
+
         TequilaSunrise.add("Tequila");
         TequilaSunrise.add("Orange_Juice");
         TequilaSunrise.add("Grenadine");
 
-        ArrayList<String> TequilaHighball = new ArrayList<String>();
+
         TequilaHighball.add("Tequila");
         TequilaHighball.add("Club_Soda");
         TequilaHighball.add("Lime");
 
         //White Rum
-        ArrayList<String> ClassicMojito = new ArrayList<String>();
+
         ClassicMojito.add("White_Rum");
         ClassicMojito.add("Simple_Syrup");
         ClassicMojito.add("Lime");
         ClassicMojito.add("Mint");
         ClassicMojito.add("Club_Soda");
 
-        ArrayList<String> PinaColada = new ArrayList<String>();
+
         PinaColada.add("White_Rum");
         PinaColada.add("Pineapple_Juice");
         PinaColada.add("Lime_Juice");
         PinaColada.add("Cream_of_Coconut");
 
         //Dark Rum
-        ArrayList<String> DarkStormy = new ArrayList<String>();
+
         DarkStormy.add("Dark_Rum");
         DarkStormy.add("Lime");
         DarkStormy.add("Ginger_Beer");
-        ArrayList<String> PainKiller = new ArrayList<String>();
+
+
         PainKiller.add("Dark_Rum");
         PainKiller.add("Cream_of_Coconut");
         PainKiller.add("Orange_Juice");
         PainKiller.add("Pineapple_Juice");
 
         //Gin
-        ArrayList<String> EnglishGardenCocktail = new ArrayList<String>();
+
         EnglishGardenCocktail.add("Gin");
         EnglishGardenCocktail.add("Apple_Juice");
         EnglishGardenCocktail.add("Lime");
         EnglishGardenCocktail.add("Cucumber");
-        ArrayList<String> BrambleGinCocktail = new ArrayList<String>();
+
         BrambleGinCocktail.add("Gin");
         BrambleGinCocktail.add("Lemon");
         BrambleGinCocktail.add("Simple_Syrup");
@@ -104,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
         Vodka_Card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                User_Input.add("Vodka");
                 Intent intent = new Intent(MainActivity.this, Activity_2.class);
 
                 // start the activity connect to the specified class
@@ -113,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
         Whiskey_Card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                User_Input.add("Whiskey");
                 Intent intent = new Intent(MainActivity.this, Activity_2.class);
 
                 // start the activity connect to the specified class
@@ -122,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
         Tequila_Card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                User_Input.add("Tequila");
                 Intent intent = new Intent(MainActivity.this, Activity_2.class);
 
                 // start the activity connect to the specified class
@@ -131,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
         White_Rum_Card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                User_Input.add("White_Rum");
                 Intent intent = new Intent(MainActivity.this, Activity_2.class);
 
                 // start the activity connect to the specified class
@@ -140,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
         Dark_Rum_Card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                User_Input.add("Dark_Rum");
                 Intent intent = new Intent(MainActivity.this, Activity_2.class);
 
                 // start the activity connect to the specified class
@@ -149,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
         Gin_Card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                User_Input.add("Gin");
                 Intent intent = new Intent(MainActivity.this, Activity_2.class);
 
                 // start the activity connect to the specified class

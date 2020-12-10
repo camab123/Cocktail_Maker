@@ -10,17 +10,16 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class Activity_2 extends AppCompatActivity {
 
     CheckBox Orange_Juice, Lemon, Ginger_Beer, Honey, Sugar, Grenadine, Club_Soda, Lime, Simple_Syrup, Mint, Pineapple_Juice, Cream_of_Coconut, Apple_Juice, Cucumber, Creme, Blueberries;
-
-    ArrayList<String> User_Input = new ArrayList<String>();
     TextView final_text;
-    private Button button;
+    Button submit_button;
+
 
     public void onCheckboxClicked(View view) {
 
@@ -28,105 +27,106 @@ public class Activity_2 extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.checkbox_OJ:
                 if (checked)
-                    User_Input.add("Orange_Juice");
+                    MainActivity.User_Input.add("Orange_Juice");
                 else
-                    User_Input.remove("Orange_Juice");
+                    MainActivity.User_Input.remove("Orange_Juice");
                 break;
             case R.id.checkbox_lemons:
                 if (checked)
-                    User_Input.add("Lemon");
+                    MainActivity.User_Input.add("Lemon");
                 else
-                    User_Input.remove("Lemon");
+                    MainActivity.User_Input.remove("Lemon");
+                break;
             case R.id.checkbox_GingerBeer:
                 if (checked)
-                    User_Input.add("Ginger_Beer");
+                    MainActivity.User_Input.add("Ginger_Beer");
                 else
-                    User_Input.remove("Ginger_Beer");
+                    MainActivity.User_Input.remove("Ginger_Beer");
                 break;
             case R.id.checkbox_honey:
                 if (checked)
-                    User_Input.add("Honey");
+                    MainActivity.User_Input.add("Honey");
                 else
-                    User_Input.remove("Honey");
+                    MainActivity.User_Input.remove("Honey");
                 break;
             case R.id.checkbox_sugar:
                 if (checked)
-                    User_Input.add("Sugar");
+                    MainActivity.User_Input.add("Sugar");
                 else
-                    User_Input.remove("Sugar");
+                    MainActivity.User_Input.remove("Sugar");
                 break;
             case R.id.checkbox_Grenadine:
                 if (checked)
-                    User_Input.add("Grenadine");
+                    MainActivity.User_Input.add("Grenadine");
                 else
-                    User_Input.remove("Grenadine");
+                    MainActivity.User_Input.remove("Grenadine");
                 break;
             case R.id.checkbox_soda:
                 if (checked)
-                    User_Input.add("Club_Soda");
+                    MainActivity.User_Input.add("Club_Soda");
                 else
-                    User_Input.remove("Club_Soda");
+                    MainActivity.User_Input.remove("Club_Soda");
                 break;
             case R.id.checkbox_lime:
                 if (checked)
-                    User_Input.add("Lime");
+                    MainActivity.User_Input.add("Lime");
                 else
-                    User_Input.remove("Lime");
+                    MainActivity.User_Input.remove("Lime");
                 break;
             case R.id.checkbox_Syrup:
                 if (checked)
-                    User_Input.add("Simple_Syrup");
+                    MainActivity.User_Input.add("Simple_Syrup");
                 else
-                    User_Input.remove("Simple_Syrup");
+                    MainActivity.User_Input.remove("Simple_Syrup");
                 break;
             case R.id.checkbox_Pineapple:
                 if (checked)
-                    User_Input.add("Pineapple");
+                    MainActivity.User_Input.add("Pineapple");
                 else
-                    User_Input.remove("Pineapple");
+                    MainActivity.User_Input.remove("Pineapple");
                 break;
             case R.id.checkbox_Coconut:
                 if (checked)
-                    User_Input.add("Cream_of_Coconut");
+                    MainActivity.User_Input.add("Cream_of_Coconut");
                 else
-                    User_Input.remove("Cream_of_Coconut");
+                    MainActivity.User_Input.remove("Cream_of_Coconut");
                 break;
             case R.id.checkbox_Apple:
                 if (checked)
-                    User_Input.add("Apple_Juice");
+                    MainActivity.User_Input.add("Apple_Juice");
                 else
-                    User_Input.remove("Apple_Juice");
+                    MainActivity.User_Input.remove("Apple_Juice");
                 break;
             case R.id.checkbox_Mint:
                 if (checked)
-                    User_Input.add("Mint");
+                    MainActivity.User_Input.add("Mint");
                 else
-                    User_Input.remove("Mint");
+                    MainActivity.User_Input.remove("Mint");
                 break;
             case R.id.checkbox_Creme:
                 if (checked)
-                    User_Input.add("Creme");
+                    MainActivity.User_Input.add("Creme");
                 else
-                    User_Input.remove("Creme");
+                    MainActivity.User_Input.remove("Creme");
                 break;
             case R.id.checkbox_Blackberries:
                 if (checked)
-                    User_Input.add("Blackberries");
+                    MainActivity.User_Input.add("Blackberries");
                 else
-                    User_Input.remove("Blackberries");
+                    MainActivity.User_Input.remove("Blackberries");
                 break;
             case R.id.checkbox_Cucumber:
                 if (checked)
-                    User_Input.add("Cucumber");
+                    MainActivity.User_Input.add("Cucumber");
                 else
-                    User_Input.remove("Cucumber");
+                    MainActivity.User_Input.remove("Cucumber");
                 break;
         }
     }
     public void finalSelection(View view){
         //add the ingredients into preview before searching
         String final_cocktail_selection = "";
-        for (String Selections : User_Input){
+        for (String Selections : MainActivity.User_Input){
             final_cocktail_selection = final_cocktail_selection + Selections + "\n";
         }
         final_text.setText(final_cocktail_selection);
@@ -135,6 +135,7 @@ public class Activity_2 extends AppCompatActivity {
         TextView t = findViewById(R.id.final_result);
         String input = t.getText().toString();
         Log.d("info", input);
+
     }
 
     @Override
@@ -144,17 +145,23 @@ public class Activity_2 extends AppCompatActivity {
         final_text = (TextView) findViewById(R.id.final_result);
         final_text.setEnabled(false);
 
-        button = findViewById(R.id.SearchButton);
-        button.setOnClickListener(new View.OnClickListener() {
+        submit_button = findViewById(R.id.SearchButton);
+        submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openSearchLayout();
+                if (MainActivity.User_Input.containsAll(MainActivity.WhiskeySour)) {
+                    Intent intent = new Intent(Activity_2.this, Whiskey_Sour_Activity.class);
+                    startActivity(intent);
+                }
+                if (MainActivity.User_Input.containsAll(MainActivity.BrambleGinCocktail)) {
+                    Intent intent = new Intent(Activity_2.this, Brample_Gin.class);
+                    startActivity(intent);
+                }
+
+                // start the activity connect to the specified class
+
             }
         });
-        }
-    public void openSearchLayout(){
-        Intent intent = new Intent (this, search_activity_layout.class);
-        startActivity(intent);
-    }
 
+    }
 }
