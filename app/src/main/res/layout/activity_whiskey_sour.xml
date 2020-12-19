@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F3B4"
-    tools:context=".English_Garden">
+    android:background="#F69C74"
+    tools:context=".Whiskey_Sour_Activity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/name9"
+            android:id="@+id/name8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="English Garden Cocktail"
-            android:textSize="55dp"
+            android:text="Whiskey Sour"
+            android:textSize="65dp"
             android:textColor="@android:color/black"
             android:gravity="center" />
         <TextView
-            android:id="@+id/spacing7"
+            android:id="@+id/spacing5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="15dp"
+            android:textSize="25dp"
             android:textColor="@android:color/white"
             android:gravity="center" />
         <LinearLayout
@@ -35,46 +35,46 @@
                 android:layout_height="250dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
-                android:src="@drawable/gin1" />
+                android:src="@drawable/wsour" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <EditText
-                    android:id="@+id/ingredients11"
+                    android:id="@+id/ingredients10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
                     android:textSize="22dp"
                     android:text=" Ingredients:" />
                 <EditText
-                    android:id="@+id/gin1"
+                    android:id="@+id/whiskey2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
                     android:textSize="18dp"
-                    android:text=" 1.6 oz Gin"/>
+                    android:text=" 2 oz Bourbon"/>
                 <EditText
-                    android:id="@+id/apple1"
+                    android:id="@+id/lemon2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
                     android:textSize="18dp"
-                    android:text=" 2.5 oz Apple Juice"/>
+                    android:text=" 3 tbsp Lemon Juice"/>
                 <EditText
-                    android:id="@+id/lime6"
+                    android:id="@+id/oj4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
                     android:textSize="18dp"
-                    android:text=" 1/5 tbsp Lime Juice"/>
+                    android:text=" 2 oz Orange Juice"/>
                 <EditText
-                    android:id="@+id/cucumber"
+                    android:id="@+id/sugar1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
                     android:textSize="18dp"
-                    android:text=" Cucumber Ribbons"/>
+                    android:text=" 1 cup Sugar"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -82,14 +82,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/spacing8"
+                android:id="@+id/spacing6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="11dp"
+                android:textSize="17dp"
                 android:gravity="center" />
             <TextView
-                android:id="@+id/recipe9"
+                android:id="@+id/recipe8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Recipe"
@@ -98,11 +98,11 @@
                 android:gravity="center" />
             <ImageView
                 android:layout_width="410dp"
-                android:layout_height="185dp"
+                android:layout_height="165dp"
                 android:layout_gravity="center"
-                android:src="@drawable/gin1_recipe" />
+                android:src="@drawable/wsourrecipe" />
             <TextView
-                android:id="@+id/results9"
+                android:id="@+id/results8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Yield: 1 Drink, Prep Time: 6 Minutes"
@@ -112,3 +112,4 @@
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
+

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EE5E3F"
-    tools:context=".MainActivity">
+    tools:context=".Tequila_Sunrise">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -90,7 +90,7 @@
                 android:textColor="@android:color/black"
                 android:gravity="center" />
             <ImageView
-                android:layout_width="490dp"
+                android:layout_width="420dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:src="@drawable/sunrise_recipe" />
