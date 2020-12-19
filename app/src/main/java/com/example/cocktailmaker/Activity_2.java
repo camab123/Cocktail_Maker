@@ -4,18 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.Touch;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class Activity_2 extends AppCompatActivity {
 
@@ -47,6 +43,8 @@ public class Activity_2 extends AppCompatActivity {
     static ArrayList<String> EnglishGardenCocktail = new ArrayList<String>();
 
     static ArrayList<String> BrambleGinCocktail = new ArrayList<String>();
+    //Test empty arra
+    static ArrayList<String> EmptyPage = new ArrayList<String>();
 
     public static void main(String[] args){
     }
@@ -167,17 +165,15 @@ public class Activity_2 extends AppCompatActivity {
         Log.d("info", input);
 
         //Vodka
-        //Does not work
         ScrewDriver.add("Vodka");
         ScrewDriver.add("Orange_Juice");
 
-        //Does not work
+
         MoscowMule.add("Vodka");
         MoscowMule.add("Lemon");
         MoscowMule.add("Ginger_Beer");
 
         //Whiskey
-        //Does not work
         HotToddy.add("Whiskey");
         HotToddy.add("Lemon");
         HotToddy.add("Honey");
@@ -189,18 +185,16 @@ public class Activity_2 extends AppCompatActivity {
         WhiskeySour.add("Sugar");
 
         //Tequila
-        //Does not work
         TequilaSunrise.add("Tequila");
         TequilaSunrise.add("Orange_Juice");
         TequilaSunrise.add("Grenadine");
 
-        //Does not work
+
         TequilaHighball.add("Tequila");
         TequilaHighball.add("Club_Soda");
         TequilaHighball.add("Lime");
 
         //White Rum
-        //Works
         ClassicMojito.add("White_Rum");
         ClassicMojito.add("Simple_Syrup");
         ClassicMojito.add("Lime");
@@ -210,28 +204,28 @@ public class Activity_2 extends AppCompatActivity {
         //Does not work
         PinaColada.add("White_Rum");
         PinaColada.add("Pineapple_Juice");
-        PinaColada.add("Lime_Juice");
+        PinaColada.add("Lime");
         PinaColada.add("Cream_of_Coconut");
 
         //Dark Rum
-        //Works
+
         DarkStormy.add("Dark_Rum");
         DarkStormy.add("Lime");
         DarkStormy.add("Ginger_Beer");
 
-        //Works
+        //Does not work
         PainKiller.add("Dark_Rum");
         PainKiller.add("Cream_of_Coconut");
         PainKiller.add("Orange_Juice");
         PainKiller.add("Pineapple_Juice");
 
         //Gin
-        //Does not work
         EnglishGardenCocktail.add("Gin");
         EnglishGardenCocktail.add("Apple_Juice");
         EnglishGardenCocktail.add("Lime");
         EnglishGardenCocktail.add("Cucumber");
-        //Works
+
+
         BrambleGinCocktail.add("Gin");
         BrambleGinCocktail.add("Lemon");
         BrambleGinCocktail.add("Simple_Syrup");
@@ -261,7 +255,7 @@ public class Activity_2 extends AppCompatActivity {
                 }
                 //If the user input contains all the items under the array list of BrambleGinCocktail go to the Brmple_Gin layout
                 if (MainActivity.User_Input.containsAll(BrambleGinCocktail)) {
-                    intent = new Intent(Activity_2.this, Brample_Gin.class);
+                    intent = new Intent(Activity_2.this, Brample_Gin_Activity.class);
                 }
                 //
                 if (MainActivity.User_Input.containsAll(ClassicMojito)) {
@@ -274,28 +268,30 @@ public class Activity_2 extends AppCompatActivity {
                     intent = new Intent(Activity_2.this, English_Garden.class);
                 }
                 if (MainActivity.User_Input.containsAll(PainKiller)){
-                    intent = new Intent(Activity_2.this, Pain_Killer.class);
+                    intent = new Intent(Activity_2.this, Pain_Killer_activity.class);
                 }
                 if (MainActivity.User_Input.containsAll(PinaColada)){
-                    intent = new Intent(Activity_2.this, Pina_Colada.class);
+                    intent = new Intent(Activity_2.this, Pina_Colada_Activity.class);
                 }
                 if (MainActivity.User_Input.containsAll(TequilaHighball)){
-                    intent = new Intent(Activity_2.this, Pina_Colada.class);
+                    intent = new Intent(Activity_2.this, Pina_Colada_Activity.class);
                 }
                 if (MainActivity.User_Input.containsAll(TequilaSunrise)){
                     intent = new Intent(Activity_2.this, Tequila_Sunrise.class);
                 }
                 if (MainActivity.User_Input.containsAll(HotToddy)){
-                    intent = new Intent(Activity_2.this, Hot_Toddy.class);
+                    intent = new Intent(Activity_2.this, Hot_Toddy_Activity.class);
                 }
                 if (MainActivity.User_Input.containsAll( MoscowMule)){
-                    intent = new Intent(Activity_2.this,  Moscow_Mule.class);
+                    intent = new Intent(Activity_2.this,  Moscow_Mule_Activity.class);
                 }
-//                if (MainActivity.User_Input.containsAll( ScrewDriver)){
-//                    intent = new Intent(Activity_2.this,  Screw_Driver.class);
-//                }
+                //If a combination of ingredients that is not part of any of the cocktails then return the empty page
+                else if (MainActivity.User_Input.containsAll(EmptyPage)){
+                    intent = new Intent(Activity_2.this,  EmptyPage.class);
+                }
+                //if everything is good
                 else{
-                    Toast.makeText(getApplicationContext(), "Selection not available", Toast.LENGTH_LONG). show();
+                    Toast.makeText(getApplicationContext(), "Enjoy", Toast.LENGTH_LONG). show();
                 }
                 startActivity(intent);
 
