@@ -83,7 +83,7 @@
                 android:textColor="@android:color/black"
                 android:gravity="center" />
             <ImageView
-                android:layout_width="470dp"
+                android:layout_width="420dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:src="@drawable/screwdriver_recipe" />
