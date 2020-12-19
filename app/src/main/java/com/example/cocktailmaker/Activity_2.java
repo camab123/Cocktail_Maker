@@ -286,6 +286,9 @@ public class Activity_2 extends AppCompatActivity {
                 if (MainActivity.User_Input.containsAll( MoscowMule)){
                     intent = new Intent(Activity_2.this,  Moscow_Mule.class);
                 }
+                if (!MainActivity.User_Input.containsAll(MoscowMule) && !MainActivity.User_Input.containsAll(HotToddy) && !MainActivity.User_Input.containsAll(TequilaSunrise) && !MainActivity.User_Input.containsAll(TequilaHighball) && !MainActivity.User_Input.containsAll(PinaColada) && !MainActivity.User_Input.containsAll(PainKiller) && !MainActivity.User_Input.containsAll(EnglishGardenCocktail) && !MainActivity.User_Input.containsAll(DarkStormy) && !MainActivity.User_Input.containsAll(ClassicMojito) && !MainActivity.User_Input.containsAll(BrambleGinCocktail) && !MainActivity.User_Input.containsAll(WhiskeySour) && !MainActivity.User_Input.containsAll(WhiskeySour) && !MainActivity.User_Input.containsAll(ScrewDriver)){
+                    intent = new Intent(Activity_2.this, MapsActivity.class);
+                }
 //                if (MainActivity.User_Input.containsAll( ScrewDriver)){
 //                    intent = new Intent(Activity_2.this,  Screw_Driver.class);
 //                }

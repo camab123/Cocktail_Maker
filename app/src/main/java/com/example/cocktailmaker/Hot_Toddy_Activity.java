@@ -1,10 +1,10 @@
 package com.example.cocktailmaker;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Hot_Toddy_Activity extends AppCompatActivity {
+import android.os.Bundle;
+
+public class Hot_Toddy_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
