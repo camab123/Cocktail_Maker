@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.Touch;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -46,9 +49,6 @@ public class Activity_2 extends AppCompatActivity {
     static ArrayList<String> BrambleGinCocktail = new ArrayList<String>();
 
     public static void main(String[] args){
-
-
-
     }
 
     public void onCheckboxClicked(View view) {
@@ -165,72 +165,73 @@ public class Activity_2 extends AppCompatActivity {
         TextView t = findViewById(R.id.final_result);
         String input = t.getText().toString();
         Log.d("info", input);
-        //Vodka
 
+        //Vodka
+        //Does not work
         ScrewDriver.add("Vodka");
         ScrewDriver.add("Orange_Juice");
 
-
+        //Does not work
         MoscowMule.add("Vodka");
         MoscowMule.add("Lemon");
         MoscowMule.add("Ginger_Beer");
 
         //Whiskey
-
+        //Does not work
         HotToddy.add("Whiskey");
         HotToddy.add("Lemon");
         HotToddy.add("Honey");
 
-
+        //Works
         WhiskeySour.add("Whiskey");
         WhiskeySour.add("Lemon");
         WhiskeySour.add("Orange_Juice");
         WhiskeySour.add("Sugar");
 
         //Tequila
-
+        //Does not work
         TequilaSunrise.add("Tequila");
         TequilaSunrise.add("Orange_Juice");
         TequilaSunrise.add("Grenadine");
 
-
+        //Does not work
         TequilaHighball.add("Tequila");
         TequilaHighball.add("Club_Soda");
         TequilaHighball.add("Lime");
 
         //White Rum
-
+        //Works
         ClassicMojito.add("White_Rum");
         ClassicMojito.add("Simple_Syrup");
         ClassicMojito.add("Lime");
         ClassicMojito.add("Mint");
         ClassicMojito.add("Club_Soda");
 
-
+        //Does not work
         PinaColada.add("White_Rum");
         PinaColada.add("Pineapple_Juice");
         PinaColada.add("Lime_Juice");
         PinaColada.add("Cream_of_Coconut");
 
         //Dark Rum
-
+        //Works
         DarkStormy.add("Dark_Rum");
         DarkStormy.add("Lime");
         DarkStormy.add("Ginger_Beer");
 
-
+        //Works
         PainKiller.add("Dark_Rum");
         PainKiller.add("Cream_of_Coconut");
         PainKiller.add("Orange_Juice");
         PainKiller.add("Pineapple_Juice");
 
         //Gin
-
+        //Does not work
         EnglishGardenCocktail.add("Gin");
         EnglishGardenCocktail.add("Apple_Juice");
         EnglishGardenCocktail.add("Lime");
         EnglishGardenCocktail.add("Cucumber");
-
+        //Works
         BrambleGinCocktail.add("Gin");
         BrambleGinCocktail.add("Lemon");
         BrambleGinCocktail.add("Simple_Syrup");
@@ -251,20 +252,51 @@ public class Activity_2 extends AppCompatActivity {
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (MainActivity.User_Input.containsAll( ScrewDriver)){
+                    intent = new Intent(Activity_2.this,  Screw_Driver.class);
+                }
+                //If the user input contains all the items under the array list of WhiskeySour go to the wiskeySour layout
                 if (MainActivity.User_Input.containsAll(WhiskeySour)) {
                     intent = new Intent(Activity_2.this, Whiskey_Sour_Activity.class);
                 }
+                //If the user input contains all the items under the array list of BrambleGinCocktail go to the Brmple_Gin layout
                 if (MainActivity.User_Input.containsAll(BrambleGinCocktail)) {
                     intent = new Intent(Activity_2.this, Brample_Gin.class);
                 }
+                //
                 if (MainActivity.User_Input.containsAll(ClassicMojito)) {
                     intent = new Intent(Activity_2.this, Mojito_Activity.class);
                 }
                 if (MainActivity.User_Input.containsAll(DarkStormy)) {
                     intent = new Intent(Activity_2.this, Dark_Stormy_Activity.class);
                 }
-
+                if (MainActivity.User_Input.containsAll(EnglishGardenCocktail)){
+                    intent = new Intent(Activity_2.this, English_Garden.class);
+                }
+                if (MainActivity.User_Input.containsAll(PainKiller)){
+                    intent = new Intent(Activity_2.this, Pain_Killer.class);
+                }
+                if (MainActivity.User_Input.containsAll(PinaColada)){
+                    intent = new Intent(Activity_2.this, Pina_Colada.class);
+                }
+                if (MainActivity.User_Input.containsAll(TequilaHighball)){
+                    intent = new Intent(Activity_2.this, Pina_Colada.class);
+                }
+                if (MainActivity.User_Input.containsAll(TequilaSunrise)){
+                    intent = new Intent(Activity_2.this, Tequila_Sunrise.class);
+                }
+                if (MainActivity.User_Input.containsAll(HotToddy)){
+                    intent = new Intent(Activity_2.this, Hot_Toddy.class);
+                }
+                if (MainActivity.User_Input.containsAll( MoscowMule)){
+                    intent = new Intent(Activity_2.this,  Moscow_Mule.class);
+                }
+//                if (MainActivity.User_Input.containsAll( ScrewDriver)){
+//                    intent = new Intent(Activity_2.this,  Screw_Driver.class);
+//                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Selection not available", Toast.LENGTH_LONG). show();
+                }
                 startActivity(intent);
 
             }
