@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#943926"
-    tools:context=".Dark_Stormy_Activity">
+    android:background="#F5F3B4"
+    tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/name2"
+            android:id="@+id/name9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dark N' Stormy"
-            android:textSize="68dp"
+            android:text="English Garden Cocktail"
+            android:textSize="55dp"
             android:textColor="@android:color/black"
             android:gravity="center" />
         <TextView
-            android:id="@+id/space3"
+            android:id="@+id/spacing7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="30dp"
+            android:textSize="15dp"
             android:textColor="@android:color/white"
             android:gravity="center" />
         <LinearLayout
@@ -31,43 +31,50 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <ImageView
-                android:layout_width="220dp"
+                android:layout_width="210dp"
                 android:layout_height="250dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
-                android:src="@drawable/darknstormy" />
+                android:src="@drawable/gin1" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <EditText
-                    android:id="@+id/ingredients4"
+                    android:id="@+id/ingredients11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="24dp"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="22dp"
                     android:text=" Ingredients:" />
                 <EditText
-                    android:id="@+id/rum1"
+                    android:id="@+id/gin1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="23dp"
-                    android:text=" 2 oz Rum"/>
+                    android:layout_marginLeft="6dp"
+                    android:textSize="18dp"
+                    android:text=" 1.6 oz Gin"/>
                 <EditText
-                    android:id="@+id/ginger2"
+                    android:id="@+id/apple1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="23dp"
-                    android:text=" 4 oz Ginger Beer"/>
+                    android:layout_marginLeft="6dp"
+                    android:textSize="18dp"
+                    android:text=" 2.5 oz Apple Juice"/>
                 <EditText
-                    android:id="@+id/lime2"
+                    android:id="@+id/lime6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="23dp"
-                    android:text=" Lime Wedge"/>
+                    android:layout_marginLeft="6dp"
+                    android:textSize="18dp"
+                    android:text=" 1/5 tbsp Lime Juice"/>
+                <EditText
+                    android:id="@+id/cucumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="18dp"
+                    android:text=" Cucumber Ribbons"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -75,15 +82,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/space4"
+                android:id="@+id/spacing8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="30dp"
-                android:textColor="@android:color/white"
+                android:textSize="11dp"
                 android:gravity="center" />
             <TextView
-                android:id="@+id/recipe2"
+                android:id="@+id/recipe9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Recipe"
@@ -91,19 +97,18 @@
                 android:textColor="@android:color/black"
                 android:gravity="center" />
             <ImageView
-                android:layout_width="420dp"
-                android:layout_height="150dp"
+                android:layout_width="410dp"
+                android:layout_height="185dp"
                 android:layout_gravity="center"
-                android:src="@drawable/darkrecipe" />
+                android:src="@drawable/gin1_recipe" />
             <TextView
-                android:id="@+id/results2"
+                android:id="@+id/results9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yield: 1 Drink, Prep Time: 3 Minutes"
-                android:textSize="30dp"
+                android:text="Yield: 1 Drink, Prep Time: 6 Minutes"
+                android:textSize="24dp"
                 android:textColor="@android:color/black"
                 android:gravity="center" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
-

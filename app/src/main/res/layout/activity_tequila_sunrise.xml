@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#943926"
-    tools:context=".Dark_Stormy_Activity">
+    android:background="#EE5E3F"
+    tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/name2"
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dark N' Stormy"
+            android:text="Tequila Sunrise"
             android:textSize="68dp"
             android:textColor="@android:color/black"
             android:gravity="center" />
         <TextView
-            android:id="@+id/space3"
+            android:id="@+id/space"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
@@ -33,41 +33,40 @@
             <ImageView
                 android:layout_width="220dp"
                 android:layout_height="250dp"
-                android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
-                android:src="@drawable/darknstormy" />
+                android:src="@drawable/tequila_sunrise" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <EditText
-                    android:id="@+id/ingredients4"
+                    android:id="@+id/ingredients3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="24dp"
                     android:text=" Ingredients:" />
                 <EditText
-                    android:id="@+id/rum1"
+                    android:id="@+id/oj2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="23dp"
-                    android:text=" 2 oz Rum"/>
+                    android:text=" 3 oz Orange Juice"/>
                 <EditText
-                    android:id="@+id/ginger2"
+                    android:id="@+id/tequila1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="23dp"
-                    android:text=" 4 oz Ginger Beer"/>
+                    android:text=" 1.5 oz Tequila"/>
                 <EditText
-                    android:id="@+id/lime2"
+                    android:id="@+id/grenadine1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="23dp"
-                    android:text=" Lime Wedge"/>
+                    android:text=" 1/2 oz grenadine"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -75,7 +74,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/space4"
+                android:id="@+id/space2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
@@ -83,7 +82,7 @@
                 android:textColor="@android:color/white"
                 android:gravity="center" />
             <TextView
-                android:id="@+id/recipe2"
+                android:id="@+id/recipe1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Recipe"
@@ -91,15 +90,15 @@
                 android:textColor="@android:color/black"
                 android:gravity="center" />
             <ImageView
-                android:layout_width="420dp"
+                android:layout_width="490dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:src="@drawable/darkrecipe" />
+                android:src="@drawable/sunrise_recipe" />
             <TextView
-                android:id="@+id/results2"
+                android:id="@+id/results1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yield: 1 Drink, Prep Time: 3 Minutes"
+                android:text="Yield: 1 Drink, Prep Time: 4 Minutes"
                 android:textSize="30dp"
                 android:textColor="@android:color/black"
                 android:gravity="center" />
