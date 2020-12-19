@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CCFFCC"
-    tools:context=".Moscow_Mule_Activity">
+    tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -90,7 +90,7 @@
                 android:textColor="@android:color/black"
                 android:gravity="center" />
             <ImageView
-                android:layout_width="420dp"
+                android:layout_width="470dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:src="@drawable/moscow_recipe" />
