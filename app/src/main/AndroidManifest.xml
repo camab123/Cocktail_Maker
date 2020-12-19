@@ -11,20 +11,18 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Dark_Stormy_Activity"></activity>
         <activity android:name=".Mojito_Activity" />
-        <activity android:name=".Brample_Gin_Activity" />
+        <activity android:name=".Brample_Gin" />
         <activity android:name=".Screw_Driver" />
-        <activity android:name=".Moscow_Mule_Activity" />
-        <activity android:name=".Tequila_Highball" />
+        <activity android:name=".Moscow_Mule" />
+        <activity android:name=".Hot_Toddy" />
         <activity android:name=".Tequila_Sunrise" />
-        <activity android:name=".Pina_Colada_Activity" />
+        <activity android:name=".Tequila_Highball" />
+        <activity android:name=".Pina_Colada" />
         <activity android:name=".English_Garden" />
-        <activity android:name=".Pain_Killer_activity" />
         <activity
             android:name=".Whiskey_Sour_Activity"
             android:label="@string/title_activity_whiskey__sour_"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Hot_Toddy_Activity" />
         <activity android:name=".Activity_2" />
         <activity android:name=".MainActivity">
             <intent-filter>
