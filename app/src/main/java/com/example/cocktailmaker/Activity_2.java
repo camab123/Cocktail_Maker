@@ -4,14 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.Touch;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class Activity_2 extends AppCompatActivity {
 
@@ -163,40 +167,36 @@ public class Activity_2 extends AppCompatActivity {
         Log.d("info", input);
 
         //Vodka
-        //Does not work
         ScrewDriver.add("Vodka");
         ScrewDriver.add("Orange_Juice");
 
-        //Does not work
+
         MoscowMule.add("Vodka");
         MoscowMule.add("Lemon");
         MoscowMule.add("Ginger_Beer");
 
         //Whiskey
-        //Does not work
         HotToddy.add("Whiskey");
         HotToddy.add("Lemon");
         HotToddy.add("Honey");
 
-        //Works
+
         WhiskeySour.add("Whiskey");
         WhiskeySour.add("Lemon");
         WhiskeySour.add("Orange_Juice");
         WhiskeySour.add("Sugar");
 
         //Tequila
-        //Does not work
         TequilaSunrise.add("Tequila");
         TequilaSunrise.add("Orange_Juice");
         TequilaSunrise.add("Grenadine");
 
-        //Does not work
+
         TequilaHighball.add("Tequila");
         TequilaHighball.add("Club_Soda");
         TequilaHighball.add("Lime");
 
         //White Rum
-        //Works
         ClassicMojito.add("White_Rum");
         ClassicMojito.add("Simple_Syrup");
         ClassicMojito.add("Lime");
@@ -210,7 +210,6 @@ public class Activity_2 extends AppCompatActivity {
         PinaColada.add("Cream_of_Coconut");
 
         //Dark Rum
-        //Works
         DarkStormy.add("Dark_Rum");
         DarkStormy.add("Lime");
         DarkStormy.add("Ginger_Beer");
@@ -222,12 +221,12 @@ public class Activity_2 extends AppCompatActivity {
         PainKiller.add("Pineapple_Juice");
 
         //Gin
-        //Does not work
         EnglishGardenCocktail.add("Gin");
         EnglishGardenCocktail.add("Apple_Juice");
         EnglishGardenCocktail.add("Lime");
         EnglishGardenCocktail.add("Cucumber");
-        //Works
+
+
         BrambleGinCocktail.add("Gin");
         BrambleGinCocktail.add("Lemon");
         BrambleGinCocktail.add("Simple_Syrup");
@@ -282,7 +281,7 @@ public class Activity_2 extends AppCompatActivity {
                     intent = new Intent(Activity_2.this, Tequila_Sunrise.class);
                 }
                 if (MainActivity.User_Input.containsAll(HotToddy)){
-                    intent = new Intent(Activity_2.this, Hot_Toddy_activity.class);
+                    intent = new Intent(Activity_2.this, Hot_Toddy.class);
                 }
                 if (MainActivity.User_Input.containsAll( MoscowMule)){
                     intent = new Intent(Activity_2.this,  Moscow_Mule.class);
@@ -291,7 +290,7 @@ public class Activity_2 extends AppCompatActivity {
 //                    intent = new Intent(Activity_2.this,  Screw_Driver.class);
 //                }
                 else{
-                    Toast.makeText(getApplicationContext(), "Selection not available", Toast.LENGTH_LONG). show();
+                    Toast.makeText(getApplicationContext(), "Enjoy", Toast.LENGTH_LONG). show();
                 }
                 startActivity(intent);
 
