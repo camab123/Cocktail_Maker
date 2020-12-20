@@ -28,7 +28,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyApZ217kZG4PTuQ4nT0-28gBJWidg7nrEc" />
+            android:value="AIzaSyBkMsjQf8f_3H2Ui57WfMi7Y3tl0NF6jEk" />
 
         <activity
             android:name=".MapsActivity"
@@ -43,6 +43,16 @@
         <activity android:name=".Tequila_Highball" />
         <activity android:name=".Pina_Colada" />
         <activity android:name=".English_Garden" />
+        <activity android:name=".layoutPage" />
+        <activity android:name=".drink2" />
+        <activity android:name=".drink3" />
+        <activity android:name=".drink4" />
+        <activity android:name=".drink5" />
+        <activity android:name=".drink6" />
+        <activity android:name=".drink7" />
+        <activity android:name=".drink8" />
+        <activity android:name=".drink9" />
+        <activity android:name=".drinkone" />
         <activity
             android:name=".Whiskey_Sour_Activity"
             android:label="@string/title_activity_whiskey__sour_"
