@@ -3,6 +3,7 @@ package com.example.cocktailmaker;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -38,12 +39,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
+        Toast.makeText(getApplicationContext(), "You don't have ingredients, here are some nearby stores.", Toast.LENGTH_LONG). show();
+        // Add a marker in DC and move the camera
+        LatLng dc = new LatLng(38.89884, -77.04903);
         mMap.addMarker(new MarkerOptions()
-                .position(sydney)
-                .title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+                .position(dc)
+                .title("Your Location"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(dc));
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(15));
     }
 }
