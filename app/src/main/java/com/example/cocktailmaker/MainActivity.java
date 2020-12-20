@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     CardView White_Rum_Card;
     CardView Dark_Rum_Card;
     CardView Vodka_Card;
+    private Button TopTen;
     //User Input
     static ArrayList<String> User_Input = new ArrayList<String>();
 
@@ -30,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
         White_Rum_Card = (CardView)findViewById(R.id.Card4);
         Dark_Rum_Card = (CardView)findViewById(R.id.Card5);
         Gin_Card = (CardView)findViewById(R.id.Card6);
+        TopTen = findViewById(R.id.TopTen);
+        TopTen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, layoutPage.class);
+
+                // start the activity connect to the specified class
+                startActivity(intent);
+            }
+        });
         Vodka_Card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
     }
 }
